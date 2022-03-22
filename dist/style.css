@@ -44,10 +44,6 @@ ul, li {
   margin: 0;
   list-style: none; }
 
-.booking__button__title {
-  font-size: 2rem;
-  font-weight: 700; }
-
 .nav {
   position: absolute;
   top: 0;
@@ -107,6 +103,8 @@ ul, li {
     color: var(--color-bg);
     background-color: var(--color-purple); }
     .booking__button__title {
+      font-size: 2rem;
+      font-weight: 700;
       margin-bottom: 2rem; }
     .booking__button__caption {
       margin-top: auto;

@@ -1,22 +1,37 @@
 .booking {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem 2rem;
   max-width: var(--page-width);
   width: 100%;
   margin: 0 auto;
   margin-top: var(--nav-height);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 1rem;
-  grid-gap: 2rem; }
+  padding: 1rem; }
   .booking__button {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
+    min-height: 300px;
+    border-radius: 8px;
     color: var(--color-bg);
     background-color: var(--color-purple); }
     .booking__button__title {
+      font-size: 2rem;
+      font-weight: 700;
       margin-bottom: 2rem; }
     .booking__button__caption {
+      margin-top: auto;
       display: flex;
       flex-direction: row; }
       .booking__button__caption p {
         margin-right: auto; }
+    .booking__button__icon {
+      position: absolute;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%); }
+
+@media (min-width: 730px) {
+  .booking {
+    grid-template-columns: repeat(2, 1fr); } }

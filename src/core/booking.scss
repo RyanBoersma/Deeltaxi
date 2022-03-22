@@ -19,7 +19,8 @@
         background-color: var(--color-purple);
 
         &__title {
-            @extend %heading-large;
+            font-size: 2rem;
+            font-weight: 700;
             margin-bottom: 2rem;
         }
 
