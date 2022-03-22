@@ -1,0 +1,43 @@
+:root {
+  --color-bg: #FAFDFF;
+  --color-text: #14181A;
+  --color-text-light: #2C2F31;
+  --color-purple: #4A007F;
+  --color-yellow: #FCB43F;
+  --color-blue: #ABC4FF;
+  --font-family: 'Roboto', sans-serif;
+  --font-family-heading: 'Montserrat', sans-serif;
+  --font-size: 19px;
+  --font-size-heading: 2rem;
+  --kerning: 0.012em;
+  --leading: 1.5;
+  --corner: 8px;
+  --page-width: 1080px;
+  --nav-height: 60px; }
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+html, body {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  letter-spacing: var(--kerning);
+  line-height: var(--leading);
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+  padding: 0; }
+
+ul, li {
+  margin: 0;
+  list-style: none; }

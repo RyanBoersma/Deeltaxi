@@ -4,24 +4,56 @@
     <title>Deeltaxi</title>
     <link rel="stylesheet" href="dist/style.css">
 </head>
-<body>
-    <div class="wrapper">
-    <div class="item0">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="info.html">Info</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-    </div>
-    <div class="item1">
-        <h1>Een taxirit boeken</h1>
-    </div>
-    <div class="item2">
-            <button class="onlineBoeken" name="Online een taxirit boeken">Online boeken</button>
+<body> 
+    <nav class="nav">
+        <div class="nav--wrapper">
+            <h1 class="nav__logo">
+                <a href="/">Logo</a>
+            </h1>
+            <ul class="nav__menu">
+                <li class="nav__menu__item"><a href="index.html">Tarieven</a></li>
+                <li class="nav__menu__item"><a href="index.html">Informatie</a></li>
+                <li class="nav__menu__item"><a href="index.html">Feedback</a></li>
+                <li class="nav__menu__item"><a href="index.html">Contact</a></li>
+            </ul>
         </div>
-    <div class="item3">
-            <button class="telefonischBoeken" name="Telefonisch een taxirit boeken">Telefonisch boeken</button>
-    </div>
-</div>
+    </nav>
+    <main class="home">
+        <section class="booking">
+            <a href="/" class="booking__button booking--online">
+                <h2 class="booking__button__title">
+                    Veilig reserveren, zonder extra wachttijden
+                </h2>
+                <div class="booking__button__caption">
+                    <p>Direct online reserveren</p>
+                    <svg width="16" height="29" viewBox="0 0 16 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.80273 1.80371L14.606 14.6069L1.80273 27.4102" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <svg class="booking__button__icon" width="193" height="120" viewBox="0 0 193 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g style="mix-blend-mode:screen" opacity="0.1">
+                    <path d="M102.513 0.411621C116.468 0.412267 129.992 5.19469 140.779 13.9437C151.565 22.6927 158.946 34.8667 161.664 48.3906C170.76 49.6044 179.049 54.1886 184.852 61.2144C190.655 68.2403 193.538 77.1826 192.917 86.2299C192.296 95.2773 188.218 103.753 181.508 109.941C174.798 116.129 165.959 119.565 156.78 119.555H138.691C140.29 119.555 141.824 118.927 142.955 117.81C144.085 116.693 144.721 115.178 144.721 113.598C144.721 112.018 144.085 110.503 142.955 109.385C141.824 108.268 140.29 107.641 138.691 107.641H12.6696C9.11696 104.199 6.20628 100.166 4.07116 95.7262H114.572C116.171 95.7262 117.705 95.0986 118.836 93.9814C119.967 92.8642 120.602 91.349 120.602 89.7691C120.602 88.1891 119.967 86.6739 118.836 85.5567C117.705 84.4395 116.171 83.8119 114.572 83.8119H0.429199C-0.143066 79.8606 -0.143066 75.8489 0.429199 71.8976H90.4531C92.0523 71.8976 93.586 71.27 94.7168 70.1528C95.8476 69.0356 96.4828 67.5203 96.4828 65.9404C96.4828 64.3605 95.8476 62.8452 94.7168 61.7281C93.586 60.6109 92.0523 59.9832 90.4531 59.9832H4.07116C7.85262 52.1021 14.0401 45.5908 21.763 41.3655C29.4859 37.1401 38.3554 35.4135 47.1235 36.4286C51.7845 25.7353 59.5144 16.6254 69.3581 10.2245C79.2019 3.82355 90.7281 0.412095 102.513 0.411621Z" fill="white"/>
+                    </g>
+                </svg>
+            </a>
+            <a href="/" class="booking__button booking--online">
+                <h2 class="booking__button__title">
+                    Spreken met een medewerker
+                </h2>
+                <div class="booking__button__caption">
+                    <p>Telefonisch reserveren</p>
+                    <svg width="16" height="29" viewBox="0 0 16 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.80273 1.80371L14.606 14.6069L1.80273 27.4102" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <svg class="booking__button__icon" width="110" height="157" viewBox="0 0 110 157" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g style="mix-blend-mode:screen" opacity="0.1">
+                    <path d="M78.098 50.4756L64.2273 42.5011C62.3702 41.4338 60.8694 39.8458 59.9107 37.9341C58.952 36.0223 58.5776 33.8707 58.8339 31.7459L60.6156 17.0244C60.8779 14.8547 61.7859 12.8116 63.2226 11.1586C64.6592 9.50564 66.5586 8.31865 68.6757 7.75076L92.928 1.24457C94.3685 0.854442 95.8731 0.761383 97.3495 0.971083C98.826 1.18078 100.243 1.68883 101.515 2.46413C102.786 3.23942 103.885 4.26564 104.743 5.47999C105.602 6.69434 106.203 8.07127 106.509 9.52647C125.622 104.24 51.4814 144.294 22.0972 155.921C20.6602 156.487 19.1199 156.745 17.5776 156.676C16.0352 156.606 14.5258 156.213 13.1485 155.52C11.7713 154.827 10.5575 153.851 9.58687 152.655C8.61629 151.46 7.91094 150.073 7.51722 148.585L1.16409 124.847C0.599415 122.737 0.682019 120.505 1.40125 118.44C2.12049 116.375 3.44336 114.57 5.19921 113.259L17.1129 104.366C18.8326 103.083 20.891 102.33 23.033 102.201C25.175 102.072 27.3065 102.572 29.1633 103.64L43.0341 111.614C43.0341 111.614 84.1019 94.1122 78.098 50.4756Z" fill="white"/>
+                    </g>
+                </svg>
+                    
+            </a>
+        </section>
+    </main>
 </body>
 </html>

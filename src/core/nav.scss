@@ -1,0 +1,43 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg);
+
+    &--wrapper {
+        display: flex;
+        margin: 0 auto;
+        width: 100%;
+        height: var(--nav-height);
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        max-width: var(--page-width);
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        padding: .5rem;
+    
+        &__item {
+            padding: .125rem .5rem;
+            margin-left: 1.5rem;
+            background-color: var(--color-bg);
+            border-radius: var(--corner);
+
+            // transition: 200ms ease-in-out;
+            // transition-property: color, background-color;
+
+            &:hover {
+                background-color: var(--color-purple);
+                color: var(--color-bg);
+
+                a { color: inherit; }
+            }
+        }
+    }
+}
