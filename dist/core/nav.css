@@ -13,6 +13,8 @@
     justify-content: center;
     align-items: center;
     max-width: var(--page-width); }
+  .nav__logo {
+    margin-left: 1rem; }
   .nav__menu {
     display: flex;
     flex-direction: row;
@@ -23,8 +25,15 @@
       margin-left: 1.5rem;
       background-color: var(--color-bg);
       border-radius: var(--corner); }
+      .nav__menu__item .link {
+        display: flex;
+        align-items: center; }
+        .nav__menu__item .link__icon {
+          margin-right: .5rem; }
       .nav__menu__item:hover {
         background-color: var(--color-purple);
         color: var(--color-bg); }
-        .nav__menu__item:hover a {
+        .nav__menu__item:hover .link {
           color: inherit; }
+          .nav__menu__item:hover .link__icon {
+            fill: var(--color-bg); }
