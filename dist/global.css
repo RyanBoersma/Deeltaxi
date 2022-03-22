@@ -28,7 +28,8 @@ html, body {
   letter-spacing: var(--kerning);
   line-height: var(--leading);
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  color: var(--color-text); }
 
 a {
   text-decoration: none;
