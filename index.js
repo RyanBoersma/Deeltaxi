@@ -1,13 +1,18 @@
 
 const menu = document.getElementById("menu");
-element.addEventListener("click", mobileMenuToggle);
+const button = document.getElementById("mobile-menubutton");
+
+button.addEventListener("click", mobileMenuToggle);
 
 let mobileMenuActive = false;
 function mobileMenuToggle() {
     mobileMenuActive = !mobileMenuActive;
     if (mobileMenuActive) {
-        document.getElementById("menu").classList.remove("is--active");
+        menu.classList.remove("is--collapsed");
+        button.classList.remove("is--collapsed");
+        
     } else {
-        document.getElementById("menu").classList.add("is--active");
+        menu.classList.add("is--collapsed");
+        button.classList.add("is--collapsed");
     }
 }

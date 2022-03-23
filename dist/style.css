@@ -72,16 +72,25 @@ ul, li {
     margin-left: auto;
     margin-right: 1rem; }
     .nav__button__icon {
+      transform: rotate(0deg);
       margin-left: .5rem;
-      stroke: var(--color-text); }
+      stroke: var(--color-text);
+      will-change: transform;
+      transition: transform 200ms ease-in-out; }
+    .nav__button.is--collapsed .nav__button__icon {
+      transform: rotate(45deg); }
   .nav__menu {
     grid-area: menu;
     display: flex;
     flex-direction: column;
     margin-left: auto;
     padding: .5rem; }
+    .nav__menu.is--collapsed {
+      display: none; }
     .nav__menu__item {
       padding: .125rem .5rem;
+      margin-top: .25rem;
+      margin-bottom: .25rem;
       margin-left: 1.5rem;
       background-color: var(--color-bg);
       border-radius: var(--corner); }
@@ -105,7 +114,12 @@ ul, li {
     visibility: none;
     display: none; }
   .nav__menu {
-    flex-direction: row; } }
+    flex-direction: row; }
+    .nav__menu__item {
+      margin-top: 0;
+      margin-bottom: 0; }
+    .nav__menu.is--collapsed {
+      display: flex; } }
 
 .booking {
   display: grid;

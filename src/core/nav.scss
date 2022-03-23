@@ -26,11 +26,22 @@
         align-items: center;
         margin-left: auto;
         margin-right: 1rem;
-
+        
         &__icon {
+            transform: rotate(0deg);
             margin-left: .5rem;
             stroke: var(--color-text);
+            will-change: transform;
+            transition: transform 200ms ease-in-out;
         }
+
+        &.is--collapsed {
+            .nav__button__icon {
+                transform: rotate(45deg);
+            }
+        }
+
+
     }
 
     &__menu {
@@ -39,9 +50,15 @@
         flex-direction: column;
         margin-left: auto;
         padding: .5rem;
+
+        &.is--collapsed {
+            display: none;
+        }
     
         &__item {
             padding: .125rem .5rem;
+            margin-top: .25rem;
+            margin-bottom: .25rem;
             margin-left: 1.5rem;
             background-color: var(--color-bg);
             border-radius: var(--corner);
@@ -85,6 +102,15 @@
             
         &__menu {
             flex-direction: row;
+
+            &__item {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            &.is--collapsed {
+                display: flex;
+            }
         }
     }
 }
