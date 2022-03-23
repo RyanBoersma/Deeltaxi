@@ -6,7 +6,7 @@
     margin: 0 auto;
     width: 100%;
     display: grid;
-    grid-template-areas: "logo   menu-button" "menu   menu";
+    grid-template-areas: "logo   menu-button" "menu   menu";
     grid-row-gap: 1rem;
     padding: .5rem 0;
     max-width: var(--page-width); }
