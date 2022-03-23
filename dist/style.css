@@ -118,6 +118,17 @@ ul, li {
       top: 50%;
       transform: translateY(-50%); }
 
+.pageInfo {
+  min-width: 100%;
+  flex-direction: row;
+  background-color: var(--color-purple);
+  color: white;
+  align-items: center;
+  padding: 2px;
+  display: flex;
+  text-align: center;
+  margin: 55px auto 0 auto; }
+
 @media (min-width: 730px) {
   .booking {
     grid-template-columns: repeat(2, 1fr); } }
