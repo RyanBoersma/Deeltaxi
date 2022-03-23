@@ -35,6 +35,13 @@ html, body {
   color: var(--color-text);
 }
 
+button {
+  background-color: inherit;
+  border: none;
+  font-size: inherit;
+  color: inherit;
+}
+
 a {
   text-decoration: none;
   color: inherit;

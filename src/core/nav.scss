@@ -1,28 +1,42 @@
 .nav {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     background-color: var(--color-bg);
+    z-index: 1000;
 
     &--wrapper {
-        display: flex;
         margin: 0 auto;
         width: 100%;
-        height: var(--nav-height);
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        display: grid;
+        grid-template-areas: 
+        "logo   menu-button"
+        "menu   menu";
+        grid-row-gap: 1rem;
+        padding: .5rem 0;
         max-width: var(--page-width);
     }
 
     &__logo {
+        grid-area: logo;
         margin-left: 1rem;
     }
 
-    &__menu {
+    &__button {
+        grid-area: menu-button;
         display: flex;
-        flex-direction: row;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 1rem;
+
+        &__icon {
+            margin-left: .5rem;
+            stroke: var(--color-text);
+        }
+    }
+
+    &__menu {
+        grid-area: menu;
+        display: flex;
+        flex-direction: column;
         margin-left: auto;
         padding: .5rem;
     
@@ -41,7 +55,7 @@
                 }
             }
 
-            &:hover {
+            &:hover, &.is--active {
                 background-color: var(--color-purple);
                 color: var(--color-bg);
 
@@ -53,6 +67,24 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media (min-width: 730px)  { 
+    .nav {
+        &--wrapper {
+            grid-template-areas: 
+            "logo   menu";
+        }
+
+        &__button {
+            visibility: none;
+            display: none;
+        }
+            
+        &__menu {
+            flex-direction: row;
         }
     }
 }

@@ -32,6 +32,12 @@ html, body {
   padding: 0;
   color: var(--color-text); }
 
+button {
+  background-color: inherit;
+  border: none;
+  font-size: inherit;
+  color: inherit; }
+
 a {
   text-decoration: none;
   color: inherit; }
@@ -45,25 +51,33 @@ ul, li {
   list-style: none; }
 
 .nav {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  background-color: var(--color-bg); }
+  background-color: var(--color-bg);
+  z-index: 1000; }
   .nav--wrapper {
-    display: flex;
     margin: 0 auto;
     width: 100%;
-    height: var(--nav-height);
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-areas: "logo   menu-button" "menu   menu";
+    grid-row-gap: 1rem;
+    padding: .5rem 0;
     max-width: var(--page-width); }
   .nav__logo {
+    grid-area: logo;
     margin-left: 1rem; }
-  .nav__menu {
+  .nav__button {
+    grid-area: menu-button;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 1rem; }
+    .nav__button__icon {
+      margin-left: .5rem;
+      stroke: var(--color-text); }
+  .nav__menu {
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     padding: .5rem; }
     .nav__menu__item {
@@ -76,13 +90,22 @@ ul, li {
         align-items: center; }
         .nav__menu__item .link__icon {
           margin-right: .5rem; }
-      .nav__menu__item:hover {
+      .nav__menu__item:hover, .nav__menu__item.is--active {
         background-color: var(--color-purple);
         color: var(--color-bg); }
-        .nav__menu__item:hover .link {
+        .nav__menu__item:hover .link, .nav__menu__item.is--active .link {
           color: inherit; }
-          .nav__menu__item:hover .link__icon {
+          .nav__menu__item:hover .link__icon, .nav__menu__item.is--active .link__icon {
             fill: var(--color-bg); }
+
+@media (min-width: 730px) {
+  .nav--wrapper {
+    grid-template-areas: "logo   menu"; }
+  .nav__button {
+    visibility: none;
+    display: none; }
+  .nav__menu {
+    flex-direction: row; } }
 
 .booking {
   display: grid;
@@ -91,7 +114,6 @@ ul, li {
   max-width: var(--page-width);
   width: 100%;
   margin: 0 auto;
-  margin-top: var(--nav-height);
   padding: 1rem; }
   .booking__button {
     position: relative;
